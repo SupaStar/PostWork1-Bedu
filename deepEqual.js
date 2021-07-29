@@ -15,11 +15,26 @@ const deepEqual = (obj1, obj2) => {
     if (obj1 === obj2){ // Comparando tipos primitivos. Casos #1 y #2
         return true;
     } else if (Array.isArray(obj1) && Array.isArray(obj2)){
-        
+
+        if (obj1.length === 0 && obj2.length === 0) return true; // Validar [] == []
+
+        if (obj1.length === obj2.length){   // Antes de comparar, verificar tengan la misma longitud
+            for (let i = 0; i < obj1.length; i++) {
+                const element1 = obj1[i];
+                const element2 = obj2[i];
+
+                if (element1 !== element2) break;
+
+                if (i === obj1.length - 1) return true;
+                
+            }
+        }
+    
     } else if ((obj1 != null && typeof obj1 == 'object') && (obj2 != null && typeof obj2 == 'object')) {
 
     }
-    else return false;
+    
+    return false;
 
 };
 
@@ -37,3 +52,4 @@ console.log('Test 6:', deepEqual([], [])); // true
 console.log('Test 7:', deepEqual({}, {})); // true
 console.log('Test 8:', deepEqual([1,2,3], [1,2,3])) // true
 console.log('Test 9:', deepEqual([1,2,3], ['1', '2', '3'])); // false
+console.log('Test 10:', deepEqual([1, {name: 'John'}], [1, {name: 'John'}])) // true
