@@ -8,42 +8,28 @@ y los valores sean la frecuencia. Los resultados deben ordenarse de manera ascen
 por los caracteres y no la frecuencia.
 */
 
-
-function freq(str){
-   /*funcion que recibe un string y devuelve un diccionario con el número de caracteres 
-   que contiene este.*/
-   
-   /* con try lo que buscamos es que si no se introduce una cadena mande un error en pantalla 
-   indicando que debe introducir una jajaja */
-   try {
-    // vamos a sortear el string y lo metemos dentro de un array, creamos un objeto vacio */
-   const list = str.split('').sort();
-   const dic = {};
-
-   /*asignamos cada valor como una key del objeto si este no esta definido
-   si está definido lo cremos y le asignamos un 1 como valor */
-   for(const key of list){
-
-      if(dic[key]){
-         ++dic[key];
-      } else {
-         dic[key] = 1;
-      }
-   }
-   return dic;
-   } catch (error){
-      console.log('Lo que introdujiste NO ES UNA CADENA, porfavor introduce una!!!!');
-
-   }
-   
+function freq(str) {
+	// Get object and throw props or amount
+	const objFreq = {};
+	for (let i = 0; i < str.length; i++) {
+		if (objFreq.hasOwnProperty(str[i])) objFreq[str[i]] += 1;
+		else objFreq[str[i]] = 1;
+	}
+	// Get new object ordened
+	const objOrdened = {};
+	Object.keys(objFreq)
+		.sort()
+		.forEach(function (key) {
+			objOrdened[key] = objFreq[key];
+		});
+	return objOrdenedF;
 }
-console.log(freq(5));
-// Lo que introdujiste NO ES UNA CADENA, porfavor introduce una!!!!
-console.log(freq('www.bedu.org'));
+
+console.log(freq("www.bedu.org"));
 // { '.': 2, b: 1, d: 1, e: 1, g: 1, o: 1, r: 1, u: 1, w: 3 }
-console.log(freq('cccbbbaaa'));
+console.log(freq("cccbbbaaa"));
 //{ a: 3, b: 3, c: 3 }
-console.log(freq('john.doe@domain.com'));
+console.log(freq("john.doe@domain.com"));
 /*{
   '.': 2,
   '@': 1,
