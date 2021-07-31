@@ -1,12 +1,42 @@
 # PostWork1-Bedu | Equipo 19
 
-Integrantes del equipo:
+## Integrantes del equipo:
 
 - [Valeria Jimeno Villegas](https://github.com/valjime95)
 - [Rogelio Magaña Tapia](https://github.com/MaganaRogelio)
 - [Obed Noe Martínez González](https://github.com/SupaStar)
 - [Sergio Gael Martínez Sarmiento](https://github.com/Searge1357)
 - [Diego Domínguez Melo](https://github.com/POWRFULCOW89)
+
+## Instrucciones
+
+1. Clonar 
+ 
+```sh
+gh repo clone SupaStar/PostWork1-Bedu
+```
+o [descargar](https://github.com/SupaStar/PostWork1-Bedu/archive/refs/heads/main.zip) el repositorio como ZIP.
+
+2. Para ejecutar los scripts, 
+
+    - Añadir como `<script>` a un documento HTML.
+
+    ```
+    ...
+    <script src="script.js"></script>
+    ...
+    ```
+
+    - En un ambiente local de Node:
+
+    ```sh
+    node "script".js 
+    ```
+    - Con [nodemon](https://github.com/remy/nodemon#installation):
+
+    ```
+    [npx] nodemon "script".js
+    ```
 
 ## Problema Deep Equal
 
