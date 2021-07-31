@@ -14,7 +14,7 @@ function chunk(array, size) {
         contadorEspacios++; 
         //Esto seguirá ocurriendo hasta que contadorEspacios sea igual al valor del size que se busca
         //o cuando i es igual al tamaño del arreglo de entrada a la función
-        if (contadorEspacios === size || i === longitud-1){
+        if (contadorEspacios === size || i >= longitud-1){
             //En el momento que se entre a este If, se empujará el arreglo arrayAux a newArray, y después se borrará el arreglo arrayAux
             //y contadorEspacios se reinicie, esto permitirá que se sigan introduciendo más del arreglo original a arrayAux
             contadorEspacios = 0; 
