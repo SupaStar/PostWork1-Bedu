@@ -21,7 +21,7 @@ o [descargar](https://github.com/SupaStar/PostWork1-Bedu/archive/refs/heads/main
 
     - Añadir como `<script>` a un documento HTML.
 
-    ```
+    ```html
     ...
     <script src="script.js"></script>
     ...
@@ -34,7 +34,7 @@ o [descargar](https://github.com/SupaStar/PostWork1-Bedu/archive/refs/heads/main
     ```
     - Con [nodemon](https://github.com/remy/nodemon#installation):
 
-    ```
+    ```sh
     [npx] nodemon "script".js
     ```
 
