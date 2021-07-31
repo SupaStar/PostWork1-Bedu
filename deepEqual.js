@@ -64,4 +64,3 @@ console.log('Test 6:', deepEqual([], [])); // true
 console.log('Test 7:', deepEqual({}, {})); // true
 console.log('Test 8:', deepEqual([1,2,3], [1,2,3])) // true
 console.log('Test 9:', deepEqual([1,2,3], ['1', '2', '3'])); // false
-console.log('Test 10:', deepEqual([1, {name: 'John'}], [1, {name: 'John'}])) // true
